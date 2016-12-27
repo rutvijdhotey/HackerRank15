@@ -24,30 +24,30 @@ public class GamingArray {
 	private static String getWinner(int[] gamesArray) {
 		String winner = "ANDY";
 		
-		 Stack<Integer> stack =  new Stack<Integer>();
-	     Stack<Integer> maxStack = new Stack<Integer>();   
-	     for(int i = 0; i < gamesArray.length; i++){
+		Stack<Integer> stack =  new Stack<Integer>();
+	    Stack<Integer> maxStack = new Stack<Integer>();   
+	    for(int i = 0; i < gamesArray.length; i++){
 	    	 stack.push(gamesArray[i]);
 	    	 if(maxStack.isEmpty()){
 	    		 maxStack.push(gamesArray[i]);
 	    	 }else if(maxStack.peek() < gamesArray[i]){
 	    		 maxStack.push(gamesArray[i]);
 	    	 } 
-	     }
+	    }
 	     
-	     int turns = 0;
-	     while(!stack.isEmpty()){
-	    	 int current_max = maxStack.pop();
-	    	 int stack_pop = 0;
-	    	 while(stack_pop!= current_max){
-	    		 stack_pop = stack.pop();
-	    	 }
-	    	 turns++;
-	     }
+	    int turns = 0;
+	    while(!stack.isEmpty()){
+	    	int current_max = maxStack.pop();
+	    	int stack_pop = 0;
+	    	while(stack_pop!= current_max){
+	    		stack_pop = stack.pop();
+	    	}
+	    	turns++;
+	    }
 		
-	     if(turns%2 == 1){
-	    	 winner = "BOB";
-	     }
+	    if(turns%2 == 1){
+	    	winner = "BOB";
+	    }
 		
 		return winner;
 	}
