@@ -22,6 +22,7 @@ public class Abbreviation {
 			String b = array[i+1];
 			
 			System.out.println(canWeAbbrev(a,b));
+			i++;
 		}
 		
 
@@ -47,6 +48,10 @@ public class Abbreviation {
 				if(compareTo.charAt(i) == main.charAt(j) || compareTo.charAt(i) == main.toUpperCase().charAt(i)){
 					checkFrom = j;
 					canWe = true;
+					break;
+				}
+				if(main.charAt(i) == main.toUpperCase().charAt(i)){
+					canWe = false;
 					break;
 				}
 				canWe = false;
