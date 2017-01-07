@@ -8,7 +8,7 @@ public class SerializerBinaryTree {
 	private static final String spliter = ",";
     private static final String NN = "X";
     
-    public class TreeNode {
+    public static class TreeNode {
 	      int val;
 	      TreeNode left;
 	      TreeNode right;
@@ -48,7 +48,7 @@ public class SerializerBinaryTree {
 		if(current.equals(NN)){
 			return null;
 		} else {
-			TreeNode node = new TreeNode(Integer.valueOf(current));
+			TreeNode node = new TreeNode(0);
 			node.left = deserializeTree(nodes);
 			node.right = deserializeTree(nodes);
 			return node;
