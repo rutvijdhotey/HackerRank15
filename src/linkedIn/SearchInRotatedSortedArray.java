@@ -3,38 +3,30 @@ package linkedIn;
 public class SearchInRotatedSortedArray {
 
 	
-	public int search(int[] array, int number){
-		int lo = 0;
-		int hi = array.length -1;
-		
-		while(lo < hi){
-			int mid = (lo + hi)/2;
-			if(array[mid] > array[hi]){
-				lo = mid + 1;
-			} else {
-				hi = mid;
-			}
-		}
-		
-		int pivotRotatedBy = lo;
-		lo = 0;
-		hi = array.length - 1;
-		
-		while(lo <= hi){
-			int mid = (lo+hi)/2;
-			int rotatedMid = (mid + pivotRotatedBy)% array.length;
-			if(array[rotatedMid] == number){
-				return rotatedMid;
-			} else if(array[rotatedMid] > number) {
-				hi = mid;
-			} else {
-				lo = mid + 1;
-			}
-		}
-		
-		return -1;
-		
-	}
+	public int search(int[] nums, int target) {
+        int start = 0;
+        int end = nums.length - 1;
+        while (start <= end){
+            int mid = (start + end) / 2;
+            if (nums[mid] == target)
+                return mid;
+        
+            if (nums[start] <= nums[mid]){
+                 if (target < nums[mid] && target >= nums[start]) 
+                    end = mid - 1;
+                 else
+                    start = mid + 1;
+            } 
+        
+            if (nums[mid] <= nums[end]){
+                if (target > nums[mid] && target <= nums[end])
+                    start = mid + 1;
+                 else
+                    end = mid - 1;
+            }
+        }
+        return -1;
+    }
 	
 	public static void main(String[] args) {
 		
