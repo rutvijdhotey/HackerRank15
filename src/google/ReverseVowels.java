@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Stack;
 
 public class ReverseVowels {
-
+	//Reverse Vowels Question on GithUb.......
 	public static String reverseVowels(String s){
 		StringBuilder ans = new StringBuilder();
 		HashSet<Character> vowels = new HashSet<>();
@@ -33,11 +33,6 @@ public class ReverseVowels {
 				ans.append(s.charAt(i));
 			}
 		}
-		
-		
-
-		
-		
 		return ans.toString();
 		
 		
