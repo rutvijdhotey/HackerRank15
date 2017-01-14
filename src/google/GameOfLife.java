@@ -1,5 +1,8 @@
 package google;
 
+import java.util.LinkedList;
+import java.util.List;
+
 public class GameOfLife {
 	 public void gameOfLife(int[][] board) {
 	        if(board == null || board.length == 0) return;
@@ -41,6 +44,7 @@ public class GameOfLife {
 	        }
 	        
 	        lives -= board[i][j] & 1;
+	        
 	        return lives;
 	    }
 
