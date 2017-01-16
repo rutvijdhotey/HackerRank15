@@ -4,6 +4,9 @@ public class LongestIncreasingPathInAMatrix {
 
 	public static int[][] xxyy = {{0,1},{1,0},{-1,0},{0,-1}};
 	public static int longestPath(int[][] matrix){
+		if(matrix.length == 0 || matrix == null) {
+	        return 0;
+	    }
 		int max = 1;
 		int m = matrix.length;
 		int n = matrix[0].length;
