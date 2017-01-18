@@ -1,7 +1,12 @@
 package google;
 
-public class RandomisedSet {
-public RandomisedSet() {
+import java.util.HashSet;
+
+public class RandomisedSet<T> {
+	HashSet<T> randomSet;
+	
+	
+	public RandomisedSet() {
         
     }
     
