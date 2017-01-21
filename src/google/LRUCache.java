@@ -3,23 +3,21 @@ package google;
 import java.util.HashMap;
 
 public class LRUCache {
-	
 
 	public static class CacheNode {
-	CacheNode next;
-	CacheNode pre;
-	int value;
-	int key;
+		CacheNode next;
+		CacheNode pre;
+		int value;
+		int key;
 
-	public CacheNode(int key,int value) {
-		super();
-		this.key = key;
-		this.value = value;
+		public CacheNode(int key, int value) {
+			super();
+			this.key = key;
+			this.value = value;
+		}
+
 	}
 
-}
-
-	
 	HashMap<Integer, CacheNode> map = new HashMap<>();
 	int size;
 	CacheNode head = null;
@@ -42,7 +40,6 @@ public class LRUCache {
 			end = n.pre;
 		}
 
-		map.remove(n.value);
 	}
 
 	public void setHead(CacheNode n) {
@@ -72,7 +69,7 @@ public class LRUCache {
 		return -1;
 	}
 
-	public void set(int k, int v) {
+	public void put(int k, int v) {
 		if (map.containsKey(k)) {
 			CacheNode n = map.get(k);
 			remove(n);
@@ -86,9 +83,11 @@ public class LRUCache {
 				map.put(k, created);
 				setHead(created);
 			} else {
-				map.put(k, created);
+
 				setHead(created);
 			}
+
+			map.put(k, created);
 
 		}
 	}
