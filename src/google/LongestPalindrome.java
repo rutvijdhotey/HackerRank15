@@ -17,6 +17,10 @@ public class LongestPalindrome {
 			}
 		}
 		
+		if(!ch.isEmpty()){
+			max++;
+		}
+		
 		
 		return max;
 	}
