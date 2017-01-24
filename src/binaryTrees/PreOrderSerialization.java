@@ -9,6 +9,7 @@ public class PreOrderSerialization {
 		for (String node : array) {
 			//Remove the element as a root : Every Number +2 -1 and every empty number(Leaf) -1.....Ultimately 
 			//We will have the diff = 0 if everything is alright
+			
 			diff--;
 			if (diff < 0) {
 				return false;
