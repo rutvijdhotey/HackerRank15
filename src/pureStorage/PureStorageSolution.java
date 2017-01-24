@@ -13,27 +13,27 @@ public class PureStorageSolution {
 	}
 	
 	
-	public static class LinkedListNode{
+	public static class LinkedListLinkedListNode{
 		int val;
-		LinkedListNode next;
+		LinkedListLinkedListNode next;
 		
-		public LinkedListNode(int val){
+		public LinkedListLinkedListNode(int val){
 			this.val = val;
 			this.next = null;
 		}
 	}
 	
 	
-	public static LinkedListNode removeNodeN(int N,LinkedListNode head){
+	public static LinkedListLinkedListNode removeLinkedListNodeN(int N,LinkedListLinkedListNode head){
 		if(head == null){
 			return null;
 		} 
-		LinkedListNode n = head;
+		LinkedListLinkedListNode n = head;
 		
 		while(n != null){
 			if(n.val == N){
-				LinkedListNode temp = n.next;
-				removeNode(n);
+				LinkedListLinkedListNode temp = n.next;
+				removeLinkedListNode(n);
 				n = temp;
 			} else {
 				n = n.next;
@@ -44,7 +44,7 @@ public class PureStorageSolution {
 	}
 	
 	
-	private static void removeNode(LinkedListNode n) {
+	private static void removeLinkedListNode(LinkedListLinkedListNode n) {
 		n.val = n.next.val;
 		n.next = n.next.next;
 	}
@@ -52,25 +52,35 @@ public class PureStorageSolution {
 
 	public static void main(String[] args) throws InterruptedException {
 		Scanner scan = new Scanner(System.in);
-		LinkedListNode dummy = new LinkedListNode(000);
-		LinkedListNode d = new LinkedListNode(000);
-		dummy.next = d;
+		//LinkedListLinkedListNode dummy = new LinkedListLinkedListNode(000);
+		//LinkedListLinkedListNode d = new LinkedListLinkedListNode(000);
+		//dummy.next = d;
 		int N = scan.nextInt();
 		while(scan.hasNextInt()){
-			int n = scan.nextInt();
-			LinkedListNode node = new LinkedListNode(n);
-			d.next = node;
-			d= d.next;
+			//int n = scan.nextInt();
+			//LinkedListLinkedListNode LinkedListNode = new LinkedListLinkedListNode(n);
+			//d.next = LinkedListNode;
+			//d= d.next;
 		}
-		scan.wait(10000);
+		//scan.wait(10000);
 		scan.close();
 		LinkedListNode head = dummy.next;
-		
-		LinkedListNode ans = removeNodeN(N, head);
-		
-		while(ans.next != null){
+	
+		while(dummy.next != null){
 			System.out.print(ans.val + " ");
 			ans = ans.next;
 		}
 	}
+	
+	
+	
+	
+	if (head != null)
+    {
+        
+    }
+	
+	
+	
+	
 }
