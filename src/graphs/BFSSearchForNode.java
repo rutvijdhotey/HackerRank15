@@ -3,6 +3,21 @@ package graphs;
 import java.util.LinkedList;
 import java.util.Queue;
 
+/*public class Node {
+
+State state;
+List<Node> adj;
+int val;
+
+// Write Constructor Here
+public Node(int n) {
+	this.val = n;
+	this.adj = new ArrayList<Node>();
+	this.state = State.UnVisited;
+}
+
+}*/
+
 public class BFSSearchForNode {
 
 	
