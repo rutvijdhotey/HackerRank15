@@ -1,6 +1,6 @@
 package binaryTrees;
 
-public class RebuildFromInorderPostOrder {
+public class RebuildFromInorderPreOrder {
 
 	public static TreeNode buildTree(int[] inorder, int[] preorder){
 		return helper(0,0,inorder.length - 1,inorder,preorder);
