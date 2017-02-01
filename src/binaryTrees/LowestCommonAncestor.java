@@ -12,12 +12,12 @@ public class LowestCommonAncestor {
         }
         
         TreeNode left = lowestCommonAncestor(root.left,p,q);
-        if(left != null && p != null && q != null){
+        if(left != null && p != left && q != left){
         	return left;
         }
         
         TreeNode right = lowestCommonAncestor(root.right,p,q);
-        if(right != null && p != null && q != null){
+        if(right != null && p != right && q != right){
         	return right;
         }
         
